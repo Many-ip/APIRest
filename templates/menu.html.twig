@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block cabecera %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+          <p>API Rest</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" data-placement="top" title="Obtener pelicula/s">GET</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{path('GET_all')}}">GET todas las peliculas</a>
+                    <a class="dropdown-item" href="{{path('GET_search')}}">GET una pelicula por id</a>
+                </div>
+        <li class="nav-item">
+          <a class="nav-link" href="{{path("PUT_search")}}" data-toggle="tooltip" data-placement="top" title="Actualitza una pelicula por la id">PUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{path("POST")}}" data-toggle="tooltip" data-placement="top" title="Añade una pelicula">POST</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{path("DELETE_search")}}" data-toggle="tooltip" data-placement="top" title="Elimina una pelicula por la id">DELETE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock %}

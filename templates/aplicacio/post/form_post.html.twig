@@ -1,0 +1,12 @@
+{% extends 'menu.html.twig' %}
+
+{% block title %}Añadir{% endblock %}
+
+{% block body %}
+        {{form_start(form)}}
+        {{form_widget(form)}}
+        <input type="submit" class = "btn btn-primary" value="Guardar">
+        {{form_end(form) }}
+    
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'menu.html.twig' %}
+{% block body %}
+<label for="id">¿Que id quieres eliminar?</label><br>
+<input type="text" id="id"><br>
+<button id="search" onclick="hola()">Buscar</button>
+<script>
+function hola (){
+   let num = document.getElementById("id").value;
+   alert("hola "+num)
+    location.href="{{path("DELETE")}}/"+num;
+}
+</script>
+{% endblock %}

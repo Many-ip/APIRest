@@ -1,0 +1,35 @@
+{% extends 'menu.html.twig' %}
+
+{% block title %}Todas las peliculas{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+            {% for pelicula in peliculas %}
+                <div class="card">
+                    <div class="card-header">
+                        {{pelicula.id}}.- {{pelicula.nombre}}
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                        <p>{{pelicula.descripcion}}</p>
+                        {% for genero in pelicula.genero %}
+                        <footer class="blockquote-footer">{{genero}}</footer>
+                        {% endfor %}
+                        </blockquote>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}

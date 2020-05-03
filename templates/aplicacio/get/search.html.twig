@@ -1,0 +1,12 @@
+{% extends 'menu.html.twig' %}
+{% block body %}
+<label for="id">¿Que id quieres ver?</label><br>
+<input type="text" id="id"><br>
+<button id="search" onclick="search()">Buscar</button>
+<script>
+function search (){
+   let num = document.getElementById("id").value;
+    location.href="{{path("GET_one")}}/"+num;
+}
+</script>
+{% endblock %}

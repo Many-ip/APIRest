@@ -4,4 +4,18 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
+    'rootApp' => [[], ['_controller' => 'App\\Controller\\AplicacioController::index'], [], [['text', '/']], [], []],
+    'GET_all' => [[], ['_controller' => 'App\\Controller\\AplicacioController::getAll'], [], [['text', '/getAll']], [], []],
+    'GET_one' => [['id'], ['id' => -1, '_controller' => 'App\\Controller\\AplicacioController::getOne'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/getOne']], [], []],
+    'GET_search' => [[], ['_controller' => 'App\\Controller\\AplicacioController::getSearch'], [], [['text', '/getSearch']], [], []],
+    'DELETE_search' => [[], ['_controller' => 'App\\Controller\\AplicacioController::deleteSearch'], [], [['text', '/deleteSearch']], [], []],
+    'DELETE' => [['id'], ['id' => -1, '_controller' => 'App\\Controller\\AplicacioController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], []],
+    'POST' => [[], ['_controller' => 'App\\Controller\\AplicacioController::post'], [], [['text', '/post']], [], []],
+    'PUT_search' => [[], ['_controller' => 'App\\Controller\\AplicacioController::searchPut'], [], [['text', '/searchPut']], [], []],
+    'PUT' => [['id'], ['id' => -1, '_controller' => 'App\\Controller\\AplicacioController::put'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/put']], [], []],
+    'add_pelicula' => [[], ['_controller' => 'App\\Controller\\PeliculasController::add'], [], [['text', '/api/pelicula']], [], []],
+    'get_one_pelicula' => [['id'], ['_controller' => 'App\\Controller\\PeliculasController::get'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/api/pelicula']], [], []],
+    'get_all_peliculas' => [[], ['_controller' => 'App\\Controller\\PeliculasController::getAll'], [], [['text', '/api/peliculas']], [], []],
+    'update_pelicula' => [['id'], ['_controller' => 'App\\Controller\\PeliculasController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/api/pelicula']], [], []],
+    'delete_pelicula' => [['id'], ['_controller' => 'App\\Controller\\PeliculasController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/api/pelicula']], [], []],
 ];
